@@ -88,4 +88,5 @@ public class FlutterFragmentPageActivity extends AppCompatActivity implements Vi
         super.onResume();
         mTab1.performClick();
     }
+
 }

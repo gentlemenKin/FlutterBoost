@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView mOpenNative;
     private TextView mOpenFlutter;
     private TextView mOpenFlutterFragment;
+    private TextView kim;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -33,10 +34,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mOpenNative = findViewById(R.id.open_native);
         mOpenFlutter = findViewById(R.id.open_flutter);
         mOpenFlutterFragment = findViewById(R.id.open_flutter_fragment);
+        kim = findViewById(R.id.open_kim);
 
         mOpenNative.setOnClickListener(this);
         mOpenFlutter.setOnClickListener(this);
         mOpenFlutterFragment.setOnClickListener(this);
+        kim.setOnClickListener(this);
+
     }
 
     @Override
@@ -56,6 +60,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             PageRouter.openPageByUrl(this, PageRouter.FLUTTER_PAGE_URL,params);
         } else if (v == mOpenFlutterFragment) {
             PageRouter.openPageByUrl(this, PageRouter.FLUTTER_FRAGMENT_PAGE_URL,params);
+        }else if (v==kim){
+            PageRouter.openPageByUrl(this,PageRouter.KIM_TEST_URL,params);
         }
     }
 }

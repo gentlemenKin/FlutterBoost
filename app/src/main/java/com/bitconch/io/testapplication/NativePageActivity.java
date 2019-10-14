@@ -24,7 +24,7 @@ public class NativePageActivity extends AppCompatActivity implements View.OnClic
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.native_page);
-
+        Map<String,String> map = (Map<String, String>) getIntent().getSerializableExtra("query");
         mOpenNative = findViewById(R.id.open_native);
         mOpenFlutter = findViewById(R.id.open_flutter);
         mOpenFlutterFragment = findViewById(R.id.open_flutter_fragment);
@@ -45,4 +45,5 @@ public class NativePageActivity extends AppCompatActivity implements View.OnClic
             PageRouter.openPageByUrl(this, PageRouter.FLUTTER_FRAGMENT_PAGE_URL,params);
         }
     }
+
 }

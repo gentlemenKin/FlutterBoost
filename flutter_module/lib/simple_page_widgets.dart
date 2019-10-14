@@ -65,7 +65,20 @@ class TabRouteWidget extends StatelessWidget {
     );
   }
 }
+class KimFlutter extends StatelessWidget{
+  final Map params;
 
+  KimFlutter(this.params);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(params["kim"]),
+      ),
+    );
+  }
+}
 class FlutterRouteWidget extends StatelessWidget {
   final String message;
 
@@ -90,6 +103,8 @@ class FlutterRouteWidget extends StatelessWidget {
           ),
           Expanded(child: Container()),
           InkWell(
+//            highlightColor: Colors.red,
+            splashColor: Colors.blue,
             child: Container(
                 padding: const EdgeInsets.all(8.0),
                 margin: const EdgeInsets.all(8.0),

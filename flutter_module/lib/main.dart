@@ -23,11 +23,13 @@ class _MyAppState extends State<MyApp> {
       'flutterFragment': (pageName, params, _) => FragmentRouteWidget(params),
 
       ///可以在native层通过 getContainerParams 来传递参数
-      'flutterPage': (pageName, params, _) {
-        print("flutterPage params:$params");
-
-        return FlutterRouteWidget();
-      },
+      'flutterPage': (pageName, params, _) =>FlutterRouteWidget(),
+      'kim':(pageName,params,_) => KimFlutter(params)
+//      'flutterPage': (pageName, params, _) {
+//        print("flutterPage params:$params");
+//
+//        return FlutterRouteWidget();
+      ,
     });
   }
 
